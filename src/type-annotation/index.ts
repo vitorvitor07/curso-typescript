@@ -13,7 +13,7 @@ const arrayDeCaracteres: string[] = ["1", "2", "3"];
 
 // Objetos
 // ? Faz com que a chave seja opcional
-const pessoa: { nome: string, idade: number, adulto?: boolean } = {
+const pessoa: { nome: string; idade: number; adulto?: boolean } = {
   nome: "vitor",
   adulto: true,
   idade: 30,
