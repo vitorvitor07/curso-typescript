@@ -180,4 +180,56 @@ function setCorFav(pessoa: Pessoa, cor: Cor) {
   return { ...pessoa, cor };
 }
 
-console.log(setCorFav(_pessoa, "Vermelho"));
+// console.log(setCorFav(_pessoa, "Vermelho"));
+
+// Intersection types
+
+type AB = "A" | "B";
+type AC = "A" | "C";
+type Intersection = AB & AC; // & => AND // Interceção dos dois tipos
+
+const pessoa01: Intersection = "A";
+
+// Funcões
+
+type MapStringCallback = (item: string) => string;
+
+function mapString(array: string[], callbackFn: MapStringCallback): string[] {
+  const newArray: string[] = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const item = array[i];
+    newArray.push(callbackFn(item));
+  }
+
+  return newArray;
+}
+
+const abc = ["a", "b", "c"];
+
+const adcMapped = mapString(abc, (item) => item.toUpperCase());
+
+// console.log(adcMapped);
+
+// Structural typing
+
+type VerifyUserFn = (user: User, sentValue: User) => boolean;
+type User = {
+  user: string;
+  password: string;
+};
+
+const VerifyUser: VerifyUserFn = (user, sentValue) => {
+  return user.user === sentValue.user && user.password === sentValue.password;
+};
+
+// Type assertion
+
+const body = document.querySelector("body");
+// pode ser null então precisa checar
+if (body) body.style.background = "red";
+
+// Ou, usando type assertion
+
+const body01 = document.querySelector("body") as HTMLBodyElement; // Precisa ter a certeza da existência do elemento
+const body02 = document.querySelector("body") as unknown as number; // Inferir outro tipo // Nâo recomendado
