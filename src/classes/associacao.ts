@@ -1,3 +1,5 @@
+// Associação - Um objeto usa outro em um determinado momento
+
 // Escritor usa Ferramenta (Aponta para uma classe abstrata) - Inversão de dependencia
 export class Escritor {
   private _ferramenta: Ferramenta | null = null;

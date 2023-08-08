@@ -1,3 +1,5 @@
+// Agregação - Ligação mais forte, um objeto precisa de outro objeto
+
 class CarrinhoCompras {
   private produtos: Array<Produto> = [];
 
