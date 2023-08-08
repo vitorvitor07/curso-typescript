@@ -17,9 +17,7 @@ export default class VideoPlayer implements VideoPlayerProtocol {
 
   constructor(VideoPlayerElements: VideoPlayerElements) {
     this.videoPlayer = VideoPlayerElements.videoPlayer;
-
     this.playButton = VideoPlayerElements.playButton;
-
     this.stopButton = VideoPlayerElements.stopButton;
   }
 
