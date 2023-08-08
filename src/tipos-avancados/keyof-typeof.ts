@@ -1,14 +1,4 @@
 // Typeof e Keyof
-// Pegar tipo do objeto dinamicamente => typeof cores
-
-/*
-type CoresRGB = {
-  vermelho: string;
-  verde: string;
-  azul: string;
-};
-*/
-
 const cores = {
   vermelho: "red",
   verde: "green",
@@ -16,6 +6,7 @@ const cores = {
 };
 
 // Passar typeof na tipagem do parâmetro
+// Pegar tipo do objeto dinamicamente => typeof cores
 function traduzCor(cor: "vermelho" | "verde" | "azul", coresRGB: typeof cores) {
   return coresRGB[cor];
 }
