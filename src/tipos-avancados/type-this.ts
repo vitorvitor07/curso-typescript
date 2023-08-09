@@ -1,5 +1,5 @@
 export class Calculadora {
-  constructor(public numero: number) { }
+  constructor(public numero: number) {}
 
   add(n: number): this {
     this.numero += n;
