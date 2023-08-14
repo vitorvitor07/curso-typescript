@@ -1,3 +1,6 @@
+// Overload
+// Fazer uma funçãi se compotar de maneira diferente de acordo com os parâmetros
+
 type Adder = {
   (x: number): number;
   (x: number, y: number): number;
