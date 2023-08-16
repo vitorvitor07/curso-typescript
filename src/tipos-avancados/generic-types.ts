@@ -54,3 +54,19 @@ function meuFilterGeneric<T>(
 
 const ArrFilterGeneric = meuFilterGeneric(arr, (value) => value > 5);
 console.log(ArrFilterGeneric);
+
+// Arrays e Promises são generics
+
+// Array
+// Quando utiliza-se Array como generic, precisa passar um argumento
+const _arr: Array<number> = arr;
+console.log(_arr);
+
+// Promise
+function myPromise(): Promise<number> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(1), 10000);
+  });
+}
+
+myPromise().then((result) => console.log(result));
