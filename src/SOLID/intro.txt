@@ -1,0 +1,18 @@
+Pricípios S.O.L.I.D
+
+S => Single responsibility principle - uma classe deve ter apenas um motivo para mudar (evite conjunções aditivas: e, bem como, também...). Este princípio está intimamente ligado com outro, conhecido como Separation of concerns;
+
+O => Open/closed principle (Princípio do aberto/fechado) - módulos, classes, objetos e
+operações devem estar abertos para extensão, mas fechados para modificações.
+
+L => Liskov substitution principle (Princípio da substituição de Liskov) - Se fi(x) é uma
+propriedade demonstrável dos objetos x de tipo T. Então fi(y) deve ser verdadeiro para objetos y
+de tipo S onde S é um subtipo de T. (Subtipos precisam ser substituíveis por seus tipos de base).
+
+I => Interface segregation principle (Princípio da segregação de Interface) - os clientes não
+devem ser forçados a depender de interfaces que não utilizam.
+
+D => Dependency inversion principle (Princípio da inversão de dependência) - módulos de
+alto nível não devem ser dependentes do módulos de baixo nível; ambos devem depender de
+abstrações. Detalhes devem depender das abstrações, não o inverso.
+
